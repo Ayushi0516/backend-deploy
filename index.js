@@ -12,7 +12,7 @@ app.get("/",(req,res)=>{
 
 app.use("/resume",topicRouter)
 
-app.listen(8080,async()=>{
+app.listen(process.env.PORT ||8080,async()=>{
     try{
         await connection
         console.log("success")
